@@ -1,0 +1,183 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Pujitha-pitta/Flyrank-ML-internship/blob/main/Frame%20your%20lane\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "yBp5QWG1_GIE"
+      },
+      "source": [
+        "# ML-03 — Frame Your Lane as an ML Task\n",
+        "\n",
+        "This skeleton is yours to fill. Work the sections **in order** — each one has a one-line hint. Simple words, honest numbers.\n",
+        "\n",
+        "> Working with an AI assistant? Tell it to read `skills/README.md` first and load the one skill this assignment names on its card."
+      ],
+      "id": "yBp5QWG1_GIE"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "tJDgF2Vs_GIF"
+      },
+      "source": [
+        "## 1. My lane as an ML task (type)\n",
+        "\n",
+        "*Classification, clustering, ranking, or scoring — which one, and why?*"
+      ],
+      "id": "tJDgF2Vs_GIF"
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "HzZqnh0W_GIF"
+      },
+      "outputs": [],
+      "source": [],
+      "id": "HzZqnh0W_GIF"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5ojCHKe4_GIF"
+      },
+      "source": [
+        "## 2. Target or proxy\n",
+        "\n",
+        "*What would you predict? Where does that label come from — observed outcome or a defined rule?*"
+      ],
+      "id": "5ojCHKe4_GIF"
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "1PSwy8oH_GIG"
+      },
+      "outputs": [],
+      "source": [],
+      "id": "1PSwy8oH_GIG"
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The data contains missing values in some fields, such as content length or performance measurements. These would need to be handled carefully before model training.\n",
+        "\n",
+        "Missingness may itself carry information, but I would first investigate why values are absent rather than automatically replacing them."
+      ],
+      "metadata": {
+        "id": "N84BLRPa_cnj"
+      },
+      "id": "N84BLRPa_cnj"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "YReAQOiN_GIG"
+      },
+      "source": [
+        "## 3. Success metric\n",
+        "\n",
+        "*One metric you can defend. What number means 'good'?*"
+      ],
+      "id": "YReAQOiN_GIG"
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "YkfsE3ru_GIG"
+      },
+      "outputs": [],
+      "source": [],
+      "id": "YkfsE3ru_GIG"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "P4l7aJA9_GIG"
+      },
+      "source": [
+        "## 4. The unit of analysis, as a real dataframe\n",
+        "\n",
+        "*Load your lane's slice and show it: one row = one what?*"
+      ],
+      "id": "P4l7aJA9_GIG"
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "XmVEKNI-_GIG"
+      },
+      "outputs": [],
+      "source": [],
+      "id": "XmVEKNI-_GIG"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "_0BbYydz_GIG"
+      },
+      "source": [
+        "## 5. Why ML beats a fixed rule here\n",
+        "\n",
+        "*What makes the pattern too messy for an if-statement?*"
+      ],
+      "id": "_0BbYydz_GIG"
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "hV6dszbJ_GIG"
+      },
+      "outputs": [],
+      "source": [],
+      "id": "hV6dszbJ_GIG"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "LeM1cXtD_GIG"
+      },
+      "source": [
+        "## Self-check\n",
+        "\n",
+        "Before you submit, confirm each line honestly:\n",
+        "\n",
+        "- [ ] Every section above is filled — markdown thinking AND the code that backs it\n",
+        "- [ ] The notebook runs top to bottom with no errors (Runtime → Run all)\n",
+        "- [ ] No client names, URLs, or private queries anywhere\n",
+        "- [ ] My claims use careful words: observed, measured, directional, decision-support\n",
+        "- [ ] Committed to my repo under `work/notebooks/` — then submit your repo URL on the card. Done."
+      ],
+      "id": "LeM1cXtD_GIG"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python"
+    },
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
