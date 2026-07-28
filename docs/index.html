@@ -120,6 +120,72 @@
         Only anonymized identifiers and safe aggregate performance variables were used.
     </p>
 </section>
+    <section>
+    <h2>Methodology</h2>
+
+    <h3>Unit of Analysis</h3>
+    <p>
+        Each row in the modeling dataset represents one content page.
+        Daily and monthly performance records were aggregated to create a page-level dataset suitable for scoring and classification.
+    </p>
+
+    <h3>Target Definition</h3>
+    <p>
+        The project used a proxy target called
+        <code>needs_refresh_proxy</code>.
+        A page was labeled as needing refresh when its performance trend was classified as declining.
+        Stable and growing pages were assigned to the non-refresh class.
+    </p>
+
+    <p>
+        This target is a practical prioritization proxy rather than a verified business outcome.
+        A declining trend may reflect seasonality, changing search demand, competition, or other external factors.
+    </p>
+
+    <h3>Features</h3>
+    <p>
+        The model used public-safe content and performance signals such as:
+    </p>
+
+    <ul>
+        <li>Search impressions</li>
+        <li>Search clicks</li>
+        <li>Click-through rate</li>
+        <li>Average search position</li>
+        <li>Pageviews and sessions</li>
+        <li>Engagement rate</li>
+        <li>Scroll activity</li>
+        <li>Content age</li>
+        <li>Days since the last update</li>
+        <li>Freshness and content-length indicators</li>
+    </ul>
+
+    <h3>Leakage Checks</h3>
+    <p>
+        Variables directly used to create the target were removed from the feature set.
+        In particular, <code>trend_direction</code> and
+        <code>trend_pct</code> were excluded because including them would allow the model to reconstruct the label and produce misleadingly strong results.
+    </p>
+
+    <h3>Baseline</h3>
+    <p>
+        A rule-based action score was used as the baseline.
+        The score prioritized pages using interpretable signals such as staleness, click-through rate, average position, impressions, and recent performance weakness.
+    </p>
+
+    <h3>Model</h3>
+    <p>
+        Logistic regression was selected as the first machine learning model.
+        It provides a simple and interpretable comparison against the rule-based baseline and produces a probability that can be used as a ranking score.
+    </p>
+
+    <h3>Validation Design</h3>
+    <p>
+        The baseline and logistic regression model were evaluated using the same held-out split.
+        Performance was compared using accuracy, precision, recall, F1-score, and ROC-AUC.
+        F1-score was treated as an important metric because it balances precision and recall and is more informative than accuracy alone when the classes are uneven.
+    </p>
+</section>
 
 </body>
 </html>
