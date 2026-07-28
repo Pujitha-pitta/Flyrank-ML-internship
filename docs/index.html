@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Refresh Opportunity Scoring | FlyRank ML Capstone</title>
 
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            max-width:1000px;
+            margin:auto;
+            padding:40px;
+            line-height:1.8;
+            color:#222;
+            background:#fafafa;
+        }
+
+        h1,h2{
+            color:#1d4ed8;
+        }
+
+        section{
+            margin-bottom:50px;
+            padding:25px;
+            background:white;
+            border-radius:10px;
+            box-shadow:0 2px 8px rgba(0,0,0,.08);
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:20px;
+        }
+
+        th,td{
+            border:1px solid #ddd;
+            padding:10px;
+            text-align:center;
+        }
+
+        th{
+            background:#1d4ed8;
+            color:white;
+        }
+
+        footer{
+            text-align:center;
+            margin-top:60px;
+            color:gray;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<h1>Content Refresh Opportunity Scoring using Search Intelligence</h1>
+
+<p>
+<strong>Author:</strong> Naga Pujitha
+</p>
+
+<p>
+<strong>FlyRank ML Internship Capstone Project</strong>
+</p>
+  <section>
+    <h2>Abstract</h2>
+
+    <p>
+        This study investigates how search and content performance signals can be used to identify pages that may benefit from content refresh.
+        Using the FlyRank ML Internship dataset, page-level features were created from search visibility, clicks, engagement, freshness, and trend information.
+        A rule-based baseline and a logistic regression model were evaluated on the same validation split, with leakage-prone variables removed before training.
+        The logistic regression model achieved a higher F1-score than the rule baseline, although overall predictive performance remained modest.
+        The final output is therefore framed as a decision-support ranking system that helps teams prioritize pages for review rather than as proof that refreshing content will cause performance improvement.
+    </p>
+</section>
+
+<section>
+    <h2>Introduction and Problem Statement</h2>
+
+    <p>
+        Content teams often manage thousands of pages and cannot manually review every page with equal attention.
+        Some pages may be declining, stale, underperforming, or showing signs that they should be investigated, while others may be stable or growing and require less immediate action.
+    </p>
+
+    <p>
+        The decision supported by this project is:
+        <strong>Which content pages should be reviewed first for a possible refresh?</strong>
+    </p>
+
+    <p>
+        The goal is to create a repeatable scoring and modeling workflow that ranks content pages according to their refresh opportunity.
+        The system does not claim that a refresh will directly cause traffic growth.
+        Instead, it provides evidence-based prioritization so that content teams can focus limited time on the pages most likely to deserve investigation.
+    </p>
+</section>
+
+<section>
+    <h2>Data</h2>
+
+    <p>
+        This project uses the gated FlyRank ML Internship warehouse release available through Hugging Face.
+        The analysis workflow accessed the data using DuckDB and the <code>hf://</code> file interface.
+    </p>
+
+    <p>
+        The warehouse includes public-safe dimension tables and monthly content performance records.
+        Relevant fields included search impressions, clicks, average position, pageviews, sessions, engaged sessions, scroll events, content age, and freshness-related information.
+    </p>
+
+    <p>
+        The analysis used available performance records from January 2025 through June 2025.
+        Data was aggregated to the content-page level before modeling.
+    </p>
+
+    <p>
+        Client names, domains, URLs, private search queries, credentials, and raw client exports were excluded.
+        Only anonymized identifiers and safe aggregate performance variables were used.
+    </p>
+</section>
+
+</body>
+</html>
