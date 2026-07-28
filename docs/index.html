@@ -186,6 +186,57 @@
         F1-score was treated as an important metric because it balances precision and recall and is more informative than accuracy alone when the classes are uneven.
     </p>
 </section>
+    <section>
+    <h2>Results</h2>
+
+    <p>
+        The rule-based baseline and the logistic regression model were evaluated using the same validation split to ensure a fair comparison. Performance was measured using Accuracy, Precision, Recall, F1-score, and ROC-AUC.
+    </p>
+
+    <table>
+        <tr>
+            <th>Model</th>
+            <th>Accuracy</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th>F1-score</th>
+            <th>ROC-AUC</th>
+        </tr>
+
+        <tr>
+            <td>Rule-Based Baseline</td>
+            <td>0.515</td>
+            <td>0.628</td>
+            <td>0.124</td>
+            <td>0.206</td>
+            <td>0.524</td>
+        </tr>
+
+        <tr>
+            <td>Logistic Regression</td>
+            <td>0.534</td>
+            <td>0.548</td>
+            <td>0.511</td>
+            <td>0.529</td>
+            <td>0.541</td>
+        </tr>
+    </table>
+
+    <h3>Discussion</h3>
+
+    <p>
+        The logistic regression model outperformed the rule-based baseline, particularly in Recall and F1-score, indicating a better balance between identifying refresh opportunities and avoiding missed cases.
+    </p>
+
+    <p>
+        Although the overall performance is modest, the model demonstrates that combining multiple search and engagement signals provides more consistent prioritization than simple rule-based scoring alone.
+    </p>
+
+    <p>
+        Rather than serving as an automated decision-maker, the model is intended to rank pages for human review, helping content teams focus on pages that deserve investigation first.
+    </p>
+
+</section>
 
 </body>
 </html>
