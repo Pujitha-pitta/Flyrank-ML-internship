@@ -237,6 +237,124 @@
     </p>
 
 </section>
+    <section>
+    <h2>Limitations and Honest Framing</h2>
+
+    <p>
+        This study is based on observational search and engagement data.
+        The results show associations between page-level signals and the refresh proxy, but they do not prove that refreshing a page will cause higher traffic, rankings, clicks, or engagement.
+    </p>
+
+    <p>
+        The target is a proxy based on declining performance rather than a confirmed editorial judgment.
+        Some pages may decline because of seasonality, reduced search demand, technical issues, changing competition, or measurement gaps.
+    </p>
+
+    <p>
+        The model performance was modest, so the output should be interpreted as directional decision support.
+        It is designed to help teams prioritize manual investigation, not replace editorial review.
+    </p>
+
+    <p>
+        Future work could use longer time windows, grouped validation by client, future-window outcome labels, calibration analysis, and post-refresh evaluation.
+    </p>
+</section>
+
+<section>
+    <h2>Ranked Recommendations</h2>
+
+    <p>
+        Pages should be ranked using the predicted refresh probability together with clear reason codes.
+        The following action playbook converts the model output into practical recommendations.
+    </p>
+
+    <ol>
+        <li>
+            <strong>Review high-visibility declining pages first.</strong>
+            Prioritize pages with strong impressions but weakening clicks, CTR, engagement, or recent performance.
+        </li>
+
+        <li>
+            <strong>Investigate CTR opportunities.</strong>
+            Review titles, descriptions, search intent alignment, and page positioning for visible pages that receive fewer clicks than expected.
+        </li>
+
+        <li>
+            <strong>Refresh stale pages with continued demand.</strong>
+            Update pages that have not been revised recently but still receive impressions, sessions, or user engagement.
+        </li>
+
+        <li>
+            <strong>Monitor recovering pages before rewriting.</strong>
+            Avoid unnecessary changes when recent signals suggest that a page may already be improving.
+        </li>
+
+        <li>
+            <strong>Protect strong and growing pages.</strong>
+            Maintain successful pages, monitor them for future decline, and avoid disruptive edits without evidence.
+        </li>
+    </ol>
+
+    <h3>Example Reason Codes</h3>
+
+    <ul>
+        <li>Declining recent performance</li>
+        <li>High impressions with low CTR</li>
+        <li>Stale content with active search demand</li>
+        <li>Weak engagement</li>
+        <li>Average position offers improvement potential</li>
+        <li>Monitor only — recent recovery detected</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Reproducibility</h2>
+
+    <p>
+        The notebooks, methodology, and supporting project files are available in the public GitHub repository.
+    </p>
+
+    <p>
+        <a href="https://github.com/Pujitha-pitta/Flyrank-ML-internship"
+           target="_blank"
+           rel="noopener noreferrer">
+            View the FlyRank ML Internship repository
+        </a>
+    </p>
+
+    <p>
+        The repository includes the weekly assignment notebooks and the capstone workflow under the
+        <code>work/</code> directory.
+    </p>
+
+    <p>
+        Access to the original gated dataset requires authorization and a Hugging Face read token.
+        No credentials, raw private exports, client names, domains, URLs, or private queries are published in this paper.
+    </p>
+</section>
+
+<section>
+    <h2>Acknowledgments and Data Credit</h2>
+
+    <p>
+        Built on the
+        <a href="https://flyrank.ai"
+           target="_blank"
+           rel="noopener noreferrer">
+            FlyRank ML Internship dataset
+        </a>.
+    </p>
+
+    <p>
+        Thanks to the FlyRank ML Internship program for providing the learning framework, anonymized search intelligence data, and project structure used in this capstone.
+    </p>
+</section>
+
+<footer>
+    <p>
+        © 2026 Naga Pujitha · FlyRank ML Internship Capstone
+    </p>
+</footer>
 
 </body>
 </html>
